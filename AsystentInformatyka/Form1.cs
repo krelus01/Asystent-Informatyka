@@ -12,15 +12,22 @@ namespace AsystentInformatyka
 {
     public partial class Form1 : Form
     {
+        BazaNotka _BazaNotka = new BazaNotka(5000);
+
         public Form1()
         {
             InitializeComponent();
-            BazaNotka _BazaNotka = new BazaNotka(5000);
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-
+            DateTime _date = DateTime.Now;
+            string _sTitle = _date.ToLongDateString() + ' ' + textBox1.Text +
+                ' ' + textBox2.Text;
+            Notka _Notka = new Notka(_sTitle, _date.ToLongDateString(), 
+                richTextBox1.Text, textBox1.Text, 
+                textBox2.Text, textBox3.Text);
+            _BazaNotka.Dodaj(_Notka);
         }
     }
 }
