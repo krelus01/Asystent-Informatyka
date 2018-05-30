@@ -1,0 +1,10 @@
+C:\Users\mkrela\Source\Repos\Asystent-Informatyka\AsystentInformatyka\bin\Debug\AsystentInformatyka.exe.config
+C:\Users\mkrela\Source\Repos\Asystent-Informatyka\AsystentInformatyka\bin\Debug\AsystentInformatyka.exe
+C:\Users\mkrela\Source\Repos\Asystent-Informatyka\AsystentInformatyka\bin\Debug\AsystentInformatyka.pdb
+C:\Users\mkrela\Source\Repos\Asystent-Informatyka\AsystentInformatyka\obj\Debug\AsystentInformatyka.csprojResolveAssemblyReference.cache
+C:\Users\mkrela\Source\Repos\Asystent-Informatyka\AsystentInformatyka\obj\Debug\AsystentInformatyka.Form1.resources
+C:\Users\mkrela\Source\Repos\Asystent-Informatyka\AsystentInformatyka\obj\Debug\AsystentInformatyka.Properties.Resources.resources
+C:\Users\mkrela\Source\Repos\Asystent-Informatyka\AsystentInformatyka\obj\Debug\AsystentInformatyka.csproj.GenerateResource.Cache
+C:\Users\mkrela\Source\Repos\Asystent-Informatyka\AsystentInformatyka\obj\Debug\AsystentInformatyka.csproj.CoreCompileInputs.cache
+C:\Users\mkrela\Source\Repos\Asystent-Informatyka\AsystentInformatyka\obj\Debug\AsystentInformatyka.exe
+C:\Users\mkrela\Source\Repos\Asystent-Informatyka\AsystentInformatyka\obj\Debug\AsystentInformatyka.pdb
