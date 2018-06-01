@@ -18,7 +18,9 @@ namespace AsystentInformatyka
         public Form1()
         {
             InitializeComponent();
+            MessageBox.Show(_BazaNotka.OdczytZXML(), "Komunikat");
             DisplayTable();
+            button2.Enabled = false;
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -28,13 +30,27 @@ namespace AsystentInformatyka
                 ' ' + textBox2.Text;
             Notka _Notka = new Notka(_sTitle, _date.ToString("g"), 
                 richTextBox1.Text, textBox1.Text, 
-                textBox2.Text, textBox3.Text);
+                textBox3.Text, textBox2.Text);
             _BazaNotka.Dodaj(_Notka);
+            string msg = _BazaNotka.ZapisDoXML();
+            if (msg != "Zapis do pliku XML przeprowadzony poprawnie.")
+                MessageBox.Show(msg, "Komunikat");
             FillTable();
+            ClearTextboxes();
+        }
+
+        private void ClearTextboxes()
+        {
+            textBox1.Text = String.Empty;
+            textBox2.Text = String.Empty;
+            textBox3.Text = String.Empty;
+            richTextBox1.Text = String.Empty;
         }
 
         private void FillTable()
         {
+            _tabela.Clear();
+
             for (int i = 0; i <= _BazaNotka.SizeOfList() - 1; i++)
             {
                 _tabela.Rows.Add(_BazaNotka.AtrZIndeks(i, 1), _BazaNotka.AtrZIndeks(i, 2), _BazaNotka.AtrZIndeks(i, 4),
@@ -54,14 +70,35 @@ namespace AsystentInformatyka
 
             DataGridViewButtonColumn _ShowImg = new DataGridViewButtonColumn();
             _ShowImg.HeaderText = "Pokaż";
-            _ShowImg.Name = "_ShowImg";
+            _ShowImg.Name = "_ShowNote";
             dataGridView1.Columns.Add(_ShowImg);
             DataGridViewButtonColumn _Remove = new DataGridViewButtonColumn();
             _Remove.HeaderText = "Usuń";
             _Remove.Name = "_Remove";
             dataGridView1.Columns.Add(_Remove);
+        }
 
-            dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells; //Ustawia szerokość kolumn względem zawartości
+        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            var senderGrid = (DataGridView)sender;
+
+            if (senderGrid.Columns[e.ColumnIndex] is DataGridViewButtonColumn 
+                && senderGrid.Columns[e.ColumnIndex].Name == "_Remove" 
+                && e.RowIndex >= 0 && e.ColumnIndex >= 0)
+            {
+                if (MessageBox.Show("Jesteś pewny?", "Potwierdzenie Usunięcia",
+                    MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                {
+                    _BazaNotka.Usun((int)dataGridView1.Rows[senderGrid.Rows[e.RowIndex].Index].Cells[1].Value - 1);
+                    FillTable();
+                }
+            }
+            if (senderGrid.Columns[e.ColumnIndex] is DataGridViewButtonColumn 
+                && senderGrid.Columns[e.ColumnIndex].Name == "_ShowNote" 
+                && e.RowIndex >= 0)
+            {
+
+            }
         }
     }
 }

@@ -10,7 +10,7 @@ using System.Xml;
 namespace AsystentInformatyka
 {
     [XmlRoot("Notka")]
-    class Notka
+    public class Notka
     {
         [XmlElement("sTitle")]
         public string sTitle;

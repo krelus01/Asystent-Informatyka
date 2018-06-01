@@ -8,3 +8,13 @@ C:\Users\mkrela\Source\Repos\Asystent-Informatyka\AsystentInformatyka\obj\Debug\
 C:\Users\mkrela\Source\Repos\Asystent-Informatyka\AsystentInformatyka\obj\Debug\AsystentInformatyka.csproj.CoreCompileInputs.cache
 C:\Users\mkrela\Source\Repos\Asystent-Informatyka\AsystentInformatyka\obj\Debug\AsystentInformatyka.exe
 C:\Users\mkrela\Source\Repos\Asystent-Informatyka\AsystentInformatyka\obj\Debug\AsystentInformatyka.pdb
+C:\!TEMP\Projekty\AsystentInformatyka\Asystent-Informatyka\obj\Debug\AsystentInformatyka.exe
+C:\!TEMP\Projekty\AsystentInformatyka\Asystent-Informatyka\obj\Debug\AsystentInformatyka.pdb
+C:\!TEMP\Projekty\AsystentInformatyka\Asystent-Informatyka\bin\Debug\AsystentInformatyka.exe.config
+C:\!TEMP\Projekty\AsystentInformatyka\Asystent-Informatyka\bin\Debug\AsystentInformatyka.exe
+C:\!TEMP\Projekty\AsystentInformatyka\Asystent-Informatyka\bin\Debug\AsystentInformatyka.pdb
+C:\!TEMP\Projekty\AsystentInformatyka\Asystent-Informatyka\obj\Debug\AsystentInformatyka.csprojResolveAssemblyReference.cache
+C:\!TEMP\Projekty\AsystentInformatyka\Asystent-Informatyka\obj\Debug\AsystentInformatyka.Form1.resources
+C:\!TEMP\Projekty\AsystentInformatyka\Asystent-Informatyka\obj\Debug\AsystentInformatyka.Properties.Resources.resources
+C:\!TEMP\Projekty\AsystentInformatyka\Asystent-Informatyka\obj\Debug\AsystentInformatyka.csproj.GenerateResource.cache
+C:\!TEMP\Projekty\AsystentInformatyka\Asystent-Informatyka\obj\Debug\AsystentInformatyka.csproj.CoreCompileInputs.cache

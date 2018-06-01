@@ -41,8 +41,9 @@
             this.label4 = new System.Windows.Forms.Label();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.plikToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.bazaNotkaBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.button2 = new System.Windows.Forms.Button();
+            this.bazaNotkaBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bazaNotkaBindingSource)).BeginInit();
@@ -60,11 +61,15 @@
             // 
             // dataGridView1
             // 
+            this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.AllowUserToDeleteRows = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(12, 27);
             this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowHeadersVisible = false;
             this.dataGridView1.Size = new System.Drawing.Size(776, 235);
             this.dataGridView1.TabIndex = 1;
+            this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             // 
             // richTextBox1
             // 
@@ -148,21 +153,31 @@
             this.plikToolStripMenuItem.Size = new System.Drawing.Size(38, 20);
             this.plikToolStripMenuItem.Text = "Plik";
             // 
-            // bazaNotkaBindingSource
-            // 
-            this.bazaNotkaBindingSource.DataSource = typeof(AsystentInformatyka.BazaNotka);
-            // 
             // toolStripMenuItem1
             // 
             this.toolStripMenuItem1.Name = "toolStripMenuItem1";
             this.toolStripMenuItem1.Size = new System.Drawing.Size(22, 20);
             this.toolStripMenuItem1.Text = " ";
             // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(542, 388);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(47, 41);
+            this.button2.TabIndex = 11;
+            this.button2.Text = "Edytuj";
+            this.button2.UseVisualStyleBackColor = true;
+            // 
+            // bazaNotkaBindingSource
+            // 
+            this.bazaNotkaBindingSource.DataSource = typeof(AsystentInformatyka.BazaNotka);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.button2);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.textBox3);
             this.Controls.Add(this.label3);
@@ -202,6 +217,7 @@
         private System.Windows.Forms.ToolStripMenuItem plikToolStripMenuItem;
         private System.Windows.Forms.BindingSource bazaNotkaBindingSource;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
+        private System.Windows.Forms.Button button2;
     }
 }
 

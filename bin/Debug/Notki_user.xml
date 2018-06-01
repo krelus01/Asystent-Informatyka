@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<ArrayOfNotka xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Notka>
+    <sTitle>01.06.2018 09:12 123123 wasdawd</sTitle>
+    <sDate>01.06.2018 09:12</sDate>
+    <sText>01.06.2018 09:12 123123 wasdawd</sText>
+    <ShopNumber>123123</ShopNumber>
+    <sPhoneNumber>wasdawd</sPhoneNumber>
+    <sPersonData>123123</sPersonData>
+  </Notka>
+  <Notka>
+    <sTitle>01.06.2018 10:06 2312 Pan pan</sTitle>
+    <sDate>01.06.2018 10:06</sDate>
+    <sText>01.06.2018 10:06 2312 Pan pan</sText>
+    <ShopNumber>2312</ShopNumber>
+    <sPhoneNumber>Pan pan</sPhoneNumber>
+    <sPersonData>019239384</sPersonData>
+  </Notka>
+  <Notka>
+    <sTitle>01.06.2018 10:06 123 asdawd awd </sTitle>
+    <sDate>01.06.2018 10:06</sDate>
+    <sText>01.06.2018 10:06 123 asdawd awd </sText>
+    <ShopNumber>123</ShopNumber>
+    <sPhoneNumber>asdawd awd </sPhoneNumber>
+    <sPersonData>1414</sPersonData>
+  </Notka>
+  <Notka>
+    <sTitle>01.06.2018 10:52 2819 Kowk skaow</sTitle>
+    <sDate>01.06.2018 10:52</sDate>
+    <sText>01.06.2018 10:52 2819 Kowk skaow</sText>
+    <ShopNumber>2819</ShopNumber>
+    <sPhoneNumber>Kowk skaow</sPhoneNumber>
+    <sPersonData>912398123</sPersonData>
+  </Notka>
+  <Notka>
+    <sTitle>01.06.2018 11:06 1234 ooakwd okawd</sTitle>
+    <sDate>01.06.2018 11:06</sDate>
+    <sText>01.06.2018 11:06 1234 ooakwd okawd</sText>
+    <ShopNumber>1234</ShopNumber>
+    <sPhoneNumber>ooakwd okawd</sPhoneNumber>
+    <sPersonData>1231412</sPersonData>
+  </Notka>
+</ArrayOfNotka>
