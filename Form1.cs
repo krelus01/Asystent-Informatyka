@@ -14,6 +14,8 @@ namespace AsystentInformatyka
     {
         BazaNotka _BazaNotka = BazaNotka.GetInstance();
         DataTable _tabela = new DataTable();
+        bool _editMode = false;
+        int _selectedIndex = 0;
 
         public Form1()
         {
@@ -32,9 +34,7 @@ namespace AsystentInformatyka
                 richTextBox1.Text, textBox1.Text, 
                 textBox3.Text, textBox2.Text);
             _BazaNotka.Dodaj(_Notka);
-            string msg = _BazaNotka.ZapisDoXML();
-            if (msg != "Zapis do pliku XML przeprowadzony poprawnie.")
-                MessageBox.Show(msg, "Komunikat");
+            ZapisBazy();
             FillTable();
             ClearTextboxes();
         }
@@ -89,16 +89,57 @@ namespace AsystentInformatyka
                 if (MessageBox.Show("Jesteś pewny?", "Potwierdzenie Usunięcia",
                     MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 {
-                    _BazaNotka.Usun((int)dataGridView1.Rows[senderGrid.Rows[e.RowIndex].Index].Cells[1].Value - 1);
+                    _BazaNotka.Usun((int)dataGridView1.Rows[senderGrid.Rows[e.RowIndex].Index].Index);
                     FillTable();
+                    ZapisBazy();
                 }
             }
             if (senderGrid.Columns[e.ColumnIndex] is DataGridViewButtonColumn 
                 && senderGrid.Columns[e.ColumnIndex].Name == "_ShowNote" 
                 && e.RowIndex >= 0)
             {
+                _selectedIndex = (int)dataGridView1.Rows[senderGrid.Rows[e.RowIndex].Index].Index;
+                richTextBox1.Text = _BazaNotka.AtrZIndeks(_selectedIndex, 3);
+                textBox1.Text = _BazaNotka.AtrZIndeks(_selectedIndex, 4);
+                textBox2.Text = _BazaNotka.AtrZIndeks(_selectedIndex, 6);
+                textBox3.Text = _BazaNotka.AtrZIndeks(_selectedIndex, 5);
+                button2.Enabled = true;
+                _editMode = true;
 
             }
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            button2.Enabled = false;
+            if (_editMode)
+            {
+                _BazaNotka.EditIndex(_selectedIndex, richTextBox1.Text, 3);
+                _BazaNotka.EditIndex(_selectedIndex, textBox1.Text, 4);
+                _BazaNotka.EditIndex(_selectedIndex, textBox2.Text, 6);
+                _BazaNotka.EditIndex(_selectedIndex, textBox3.Text, 5);
+            }
+            _editMode = false;
+            FillTable();
+            ZapisBazy();
+        }
+
+        private void ZapisBazy ()
+        {
+            string msg = _BazaNotka.ZapisDoXML();
+            if (msg != "Zapis do pliku XML przeprowadzony poprawnie.")
+                MessageBox.Show(msg, "Komunikat");
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            richTextBox1.Text = "";
+            textBox1.Text = "";
+            textBox2.Text = "";
+            textBox3.Text = "";
+            _editMode = false;
+            _selectedIndex = 0;
+            button2.Enabled = false;
         }
     }
 }

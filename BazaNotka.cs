@@ -78,6 +78,43 @@ namespace AsystentInformatyka
             }
         }
 
+        /// <summary>
+        /// Funkcja edytująca istniejący na liście obiekt, atrybut wybierany z flagi:
+        /// 1-tytuł, 2-data, 3-treść, 4-nr. sklepu, 5-nr. telefonu, 6-dane osobowe
+        /// </summary>
+        /// <param name="_indeks"></param>
+        /// <param name="flag"></param>
+        /// <returns></returns>
+        public void EditIndex(int _indeks, string NewWartosc, int flag)
+        {
+            if (flag < 0 && flag > 6)
+                flag = 1;
+            switch (flag)
+            {
+                case 1:
+                    ListaNotka[_indeks].sTitle = NewWartosc;
+                    break;
+                case 2:
+                    ListaNotka[_indeks].sDate = NewWartosc;
+                    break;
+                case 3:
+                    ListaNotka[_indeks].sText = NewWartosc;
+                    break;
+                case 4:
+                    ListaNotka[_indeks].sShopNumber = NewWartosc;
+                    break;
+                case 5:
+                    ListaNotka[_indeks].sPhoneNumber = NewWartosc;
+                    break;
+                case 6:
+                    ListaNotka[_indeks].sPersonData = NewWartosc;
+                    break;
+                default:
+                    ListaNotka[_indeks].sTitle = NewWartosc;
+                    break;
+            }
+        }
+
         public string ZapisDoXML()
         {
             try

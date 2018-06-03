@@ -38,7 +38,7 @@ namespace AsystentInformatyka
         {
             sTitle = _sTitle;
             sDate = _sDate;
-            sText = _sTitle;
+            sText = _sText;
             sShopNumber = _sShopNumber;
             sPhoneNumber = _sPhoneNumber;
             sPersonData = _sPersonData;
